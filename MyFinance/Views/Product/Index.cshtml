@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MyFinance.Domain.Entities.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div id="divExpenseList">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+
+            @Html.Partial("_DisplayProduct", item)
+
+        }
+    }
+
+
+</div>
+
+
+
+

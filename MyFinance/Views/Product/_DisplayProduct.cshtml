@@ -1,0 +1,9 @@
+﻿@model MyFinance.Domain.Entities.Product
+@{string path = "~/Content/Upload/" + @Model.ImageName;}
+
+<img alt="Produit" src="@Url.Content(path)" />
+<p>@Model.Description</p>
+<p>@Model.Price</p>
+<p>@Html.ActionLink("Details", "Details", new { id = Model.ProductId })</p>
+
+
